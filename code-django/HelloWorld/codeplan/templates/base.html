@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 英语就是en -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="heng,code" />
+    <meta name="author" content="heng">
+    <meta name="description" content="Hello" />
+    <link rel="Shortcut Icon" href="http://web.yunduanjianzhan.cn/images/logos/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'codeplan/css/index.css' %}">
+    <title>代码计划</title>
+
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="text-center mb-4">
+        <img src="{% static 'codeplan/imgs/logo.png' %}" alt="Community Icon" style="max-height: 150px;"> <!-- Adjust the path and styling as needed -->
+        </div>
+<div class="container">
+
+ {% block content %}{% endblock %}
+ 
+</div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </body>
+  </html>

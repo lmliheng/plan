@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for plan in plans %}
+<div class="row"><div class="col-md-4 day-box">
+    <h5 class="day-title">{{ plan.title }}</h5>
+    <ul class="task-list">
+      <li><input type="checkbox" class="checkbox" id="day1-task0"><label for="day1-task0">{{plan.one}}</label></li>
+      <li><input type="checkbox" class="checkbox" id="day1-task1"><label for="day1-task1">{{plan.two}}</label></li>
+      <li><input type="checkbox" class="checkbox" id="day1-task2"><label for="day1-task2">{{plan.three}}</label></li>
+      <li><input type="checkbox" class="checkbox" id="day1-task3"><label for="day1-task3">{{plan.four}}</label></li>
+      <li><input type="checkbox" class="checkbox" id="day1-task4"><label for="day1-task4">{{plan.five}}</label></li>
+      <li><input type="checkbox" class="checkbox" id="day1-task5"><label for="day1-task5">{{plan.six}}</label></li>
+      <li><input type="checkbox" class="checkbox" id="day1-task6"><label for="day1-task6">{{plan.seven}}</label></li></ul>
+    </div>
+  </div>
+
+  {% empty %}
+      <div class="col-md-12">
+          <p>暂无计划</p>
+      </div>
+  {% endfor %}
+  {% endblock %}
